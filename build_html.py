@@ -42,7 +42,8 @@ HTML_HEAD = """<!DOCTYPE html>
 <meta name="description" content="Historical record of osu!taiko top performance points (pp) plays, manually collected by Vanity8.">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- スマホでもPC版レイアウトで表示させる -->
+  <meta name="viewport" content="width=1280">
   <title>osu!taiko pp record history</title>
   <link rel="stylesheet" href="style.css">
 </head>
