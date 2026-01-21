@@ -80,6 +80,14 @@ HTML_HEAD = """<!DOCTYPE html>
   <tbody>
 """
 
+HTML_GITHUB_LINK = """
+<div class="footer">
+  <a href="https://github.com/calmeel/osu-taiko-pp-record-history" target="_blank" rel="noopener noreferrer">
+    View this project on GitHub
+  </a>
+</div>
+"""
+
 HTML_FOOT = """  </tbody>
 </table>
 </div>
@@ -548,7 +556,7 @@ def main():
 
         rows_html.append("".join(row_parts))
 
-    html_output = HTML_HEAD + "".join(rows_html) + HTML_FOOT
+    html_output = HTML_HEAD + "".join(rows_html) + HTML_GITHUB_LINK + HTML_FOOT
     OUTPUT_FILE.write_text(html_output, encoding="utf-8")
     print(f"生成完了: {OUTPUT_FILE}")
 

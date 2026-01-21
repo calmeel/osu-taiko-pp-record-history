@@ -173,7 +173,8 @@ Asset-specific exceptions:
 | Jacket art | Copyright holders (not redistributed for commercial use) |
 | Replay files | Players (archival only) |
 | Platform logos | Trademark owners |
-| Mod/flag icons | MIT (from osu-web) |
+| Mod/flag icons | MIT (from `osu-web`) |
+| Fonts (Aller) | © Dalton Maag Ltd. — License included in `fonts/Aller Font License.txt` |
 | Other assets | © Their respective owners |
 
 For full license details, see: LICENSE, NOTICE, and ATTRIBUTION.md
