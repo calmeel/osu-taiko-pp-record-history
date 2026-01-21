@@ -1,0 +1,357 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('fonts/Aller_Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aller';
+  src: url('fonts/Aller_Bd.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Aller', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #2F382E;   /* 基本背景色 */
+  color: #F4F5F4;        /* デフォルト文字色 */
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+/* 表全体：Excel 風 */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table.pp-table {
+  border-collapse: collapse;
+  background: #2F382E;   /* テーブル背景もベース色に揃える */
+  color: #F4F5F4;
+  min-width: 900px;
+  font-family: 'Aller', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 700;      /* 基本太字 */
+}
+
+.pp-table th,
+.pp-table td {
+  /* 縦線を消す */
+  border-left: none;
+  border-right: none;
+
+  /* 横線のみ 2pt相当 */
+  border-top: none;
+  border-bottom: 2px solid #232A22;
+
+  padding: 4px 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* 下部の余白 */
+.pp-table {
+  margin-bottom: 60px;
+}
+
+/* 先頭行（ヘッダー）の上側だけ線を引きたい場合 */
+.pp-table thead th {
+  border-top: 2px solid #232A22;
+}
+
+/* ヘッダー背景を少し暗めにしてメリハリを出す */
+.pp-table th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #171C17;
+  text-align: left;
+}
+
+/* 画像系 */
+.flag-icon {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+}
+
+.jacket {
+  height: 28px;     /* 縦を少し小さめに */
+  width: 42px;      /* 縦:横 ≒ 3:2 に寄せる */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;   /* 中央寄せしたい場合 */
+}
+
+/* 行の高さも少し抑える */
+.pp-table td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.mod-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 2px;
+}
+
+.ref-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+
+/* リンク */
+.pp-table a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.pp-table a:hover {
+  text-decoration: underline;
+}
+
+/* SRv2 PPv2 などの列用 */
+.pp-era {
+  background: #232A22;
+}
+
+/* アイコン系の列だけ中央揃え */
+.pp-table th.icon-col,
+.pp-table td.icon-col {
+  text-align: center;
+}
+
+/* Date *//* Days */
+.pp-table tbody .col-date,
+.pp-table tbody .col-days {
+  color: #91A38F;
+}
+
+/* Player / Map */
+.pp-table tbody .col-player,
+.pp-table tbody .col-map {
+  color: #A3CF9F;
+}
+
+/* PP */
+.pp-table tbody .col-pp {
+  color: #F4F5F4;
+}
+
+/* SR */
+.pp-table tbody .col-sr {
+  color: #F4F5F4;
+}
+
+/* ACC */
+.pp-table tbody .col-acc {
+  color: #FFCC34;
+}
+
+/* --- SRv2 / SRv3 / etc サブ見出し行 --- */
+.pp-table tr.section-row td {
+  background: #232A22;    /* 背景 */
+  color: #A3CF9F;         /* テキスト */
+  font-weight: 700;       /* Bold */
+  padding: 6px 10px;
+  text-align: left;
+  border-left: none;
+  border-right: none;
+  border-top: 2px solid #232A22;
+  border-bottom: 2px solid #232A22;
+  font-family: 'Aller', sans-serif;
+}
+
+/* タイトル内の Vanity8 リンク色を上書き */
+h1 a,
+h1 a:visited {
+  color: #A3CF9F;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: #A3CF9F;
+  text-decoration: underline;
+}
+
+/* Player / Map のリンク色を上書き */
+.pp-table tbody .col-player a,
+.pp-table tbody .col-player a:visited,
+.pp-table tbody .col-map a,
+.pp-table tbody .col-map a:visited {
+  color: #A3CF9F;
+  text-decoration: none;
+}
+
+/* セクション行（SRv2〜など）のリンク色も統一 */
+.section-row a,
+.section-row a:visited {
+  color: #A3CF9F;
+  text-decoration: none;
+}
+
+.section-row a:hover {
+  color: #A3CF9F;
+  text-decoration: underline;
+}
+
+/* hover時だけ下線を出す */
+.pp-table tbody .col-player a:hover,
+.pp-table tbody .col-map a:hover {
+  color: #A3CF9F;
+  text-decoration: underline;
+}
+
+/* 基本フォントサイズ */
+.pp-table {
+  font-size: 12px;
+}
+
+/* PP列だけフォントサイズを少し大きくする */
+.pp-table td.col-pp {
+  font-size: 14px;  /* +2 px */
+}
+
+.pp-table td.col-ppdiff {
+  text-align: left;
+  width: 55px;
+  color: #A3CF9F;
+  font-size: 12px;
+}
+
+/* ppのヘッダー側のフォントサイズ */
+.pp-table th.col-pp {
+  font-size: 12px;
+}
+
+/* 数値・アイコン系の列幅調整 */
+.pp-table .col-sr {
+  width: 70px;
+  text-align: center;
+}
+
+.pp-table .col-pp {
+  width: 80px;
+  text-align: center;
+}
+
+.pp-table .col-acc {
+  width: 100px;
+  text-align: center;
+}
+
+/* osu / YouTube / reddit / X のアイコン列 */
+.pp-table .icon-col {
+  width: 60px;           /* 必要なら 60〜64 にしてもOK */
+  text-align: center;
+}
+
+/* PPセル内のレイアウト（縦2段・中央寄せ） */
+.pp-table td.col-pp {
+  text-align: center;
+}
+
+.pp-cell {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+/* 上段: メインの PP （1,749 pp） */
+.pp-main {
+  font-size: 14px;
+}
+
+/* 下段: 差分 (+83) は少し小さく＆控えめな色で */
+.pp-diff {
+  font-size: 11px;
+  color: #A3CF9F;
+}
+
+/* PP DIFF 色分類 */
+.pp-table td.col-ppdiff.ppdiff-pos {
+  color: #A3CF9F;  /* 緑 */
+}
+
+.pp-table td.col-ppdiff.ppdiff-neg {
+  color: #FF6666;  /* 赤 */
+}
+
+.pp-table td.col-ppdiff.ppdiff-zero {
+  color: #91A38F;  /* グレー */
+}
+
+/* 備考列 */
+.pp-table td.col-remarks {
+  width: 180px;           /* 好きな幅に調整 */
+  text-align: left;
+  color: #91A38F;
+  padding: 4px 6px;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+@media (max-width: 800px) {
+  body {
+    zoom: 0.75;
+  }
+}
+
+/* SR バッジ（★ 6.85 みたいなやつ） */
+.sr-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;                 /* ★ と数字の間の最低スペース */
+    padding: 2px 6px;        /* 上下 / 左右の余白 */
+    border-radius: 9999px;    /* 楕円形 (pill) */
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    background: #44A2FC;      /* Excel 未指定時のデフォルト背景色 */
+    color: #000000;           /* Excel 未指定時のデフォルト文字色 */
+    white-space: nowrap;      /* 改行させない */
+    box-sizing: border-box;
+}
+
+/* SR 列の td に何か共通設定があればここで */
+td.sr {
+    text-align: center;
+}
+
+/* リプレイ */
+td.col-replay {
+    text-align: center;
+}
+
+a.replay-link {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 0.6rem;
+    line-height: 1.2;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #303040;
+}
+
+a.replay-link:hover {
+    background-color: #3f3f60;
+    text-decoration: none;
+}
