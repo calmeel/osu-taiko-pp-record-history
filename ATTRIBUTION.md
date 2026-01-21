@@ -28,5 +28,11 @@ Assets used:
  - Mod icons  
  - Flag icons  
 
+## Fonts
+
+**Aller** typeface  
+© Dalton Maag Ltd.  
+License: see `fonts/Aller Font License.txt` in this repository for full terms.
+
 ## Related Notes
 This project does not monetize any content and does not claim ownership over any third-party material.

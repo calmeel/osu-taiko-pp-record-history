@@ -116,6 +116,16 @@ Source: https://github.com/ppy/osu-web
 License: MIT  
 These are used under the terms of that license with proper attribution.
 
+### Fonts
+
+This project uses the **Aller** typeface for headings and UI elements.
+
+Aller is © Dalton Maag Ltd and is used under its respective license.  
+The full license text is included in this repository at:
+
+`fonts/Aller Font License.txt`
+
+Please refer to that file for the exact terms of use before reusing the font files outside of this project.
 
 ## 📑 Legal & Trademark Notes
 
