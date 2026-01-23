@@ -61,6 +61,8 @@ HTML_HEAD = """<!DOCTYPE html>
     <tr>
       <th class="col-date" scope="col">Date</th>
       <th class="col-days" scope="col">Days maintained</th>
+      <th class="col-pp" scope="col">PP</th>
+      <th class="col-pp"> </th>
       <th class="icon-col"> </th>
       <th class="col-player" scope="col">Player</th>
       <th class="icon-col"> </th>
@@ -68,8 +70,6 @@ HTML_HEAD = """<!DOCTYPE html>
       <th class="col-sr" scope="col">SR</th>
       <th>Mod</th>
       <th class="col-acc" scope="col">Acc</th>
-      <th class="col-pp" scope="col">PP</th>
-      <th class="col-pp"> </th>
       <th class="icon-col">osu!</th>
       <th class="icon-col">YouTube</th>
       <th class="icon-col">reddit</th>
@@ -461,6 +461,14 @@ def main():
             f'      <td class="col-days">{html.escape(days_display)}</td>\n'
         )
 
+        # PP（1,749 pp (+83)）
+        row_parts.append(f'      <td class="col-pp">{html.escape(pp_main_text)}</td>\n')
+
+        # PP diff
+        row_parts.append(
+            f'      <td class="col-ppdiff {pp_diff_class}">{html.escape(pp_diff_text)}</td>\n'
+        )
+
         # Flag
         row_parts.append(build_flag_cell(flag_filename))
 
@@ -481,14 +489,6 @@ def main():
 
         # ACC
         row_parts.append(f'      <td class="col-acc">{html.escape(acc_str)}</td>\n')
-
-        # PP（1,749 pp (+83)）
-        row_parts.append(f'      <td class="col-pp">{html.escape(pp_main_text)}</td>\n')
-
-        # PP diff
-        row_parts.append(
-            f'      <td class="col-ppdiff {pp_diff_class}">{html.escape(pp_diff_text)}</td>\n'
-        )
 
         # osu / YouTube / reddit / X
         row_parts.append(

@@ -230,7 +230,7 @@ h1 a:hover {
   text-align: left;
   width: 55px;
   color: #A3CF9F;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 /* ppのヘッダー側のフォントサイズ */
@@ -279,7 +279,7 @@ h1 a:hover {
 
 /* 下段: 差分 (+83) は少し小さく＆控えめな色で */
 .pp-diff {
-  font-size: 11px;
+  font-size: 10px;
   color: #A3CF9F;
 }
 
