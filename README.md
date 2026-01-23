@@ -35,6 +35,25 @@ Records are manually collected through:
 
 Fields such as **Days maintained** are automatically updated daily via GitHub Actions.
 
+## 📁 Evidence & Verification
+
+This repository maintains a companion folder named `evidence/` which stores
+primary sources used to verify the accuracy of historical PP data.
+
+These include:
+
+- screenshots of plays
+- replay files (.osr)
+- player comments and self-reports
+- leaderboard snapshots
+- metadata notes (as `.md`)
+
+The purpose of this folder is to preserve **verifiable historical context**
+for cases where public data has been deleted, made private, or otherwise became
+difficult to retrieve in the future.
+
+Community submissions are welcome — especially if you possess historical data
+that is currently missing from the archive.
 
 ## 📂 Repository Structure
 ```
@@ -49,7 +68,12 @@ osu-taiko-pp-record-history/
 ├─ ref_icons/ -> External link icons
 ├─ icons_mod/ -> Mod icons
 ├─ icons_flag/ -> Country flags
-└─ replays/ -> .osr replay files
+├─ replays/ -> .osr replay files
+└─ evidence/             → Primary sources for verification
+     ├─ YYYY-MM-DD_ppUUU/
+     │     ├─ screenshot.png
+     │     ├─ memo.md
+     └─ ...
 ```
 
 Replay files are provided when available for verification and archival purposes.
