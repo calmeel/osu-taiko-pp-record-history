@@ -165,7 +165,7 @@ table.pp-table {
 /* --- SRv2 / SRv3 / etc サブ見出し行 --- */
 .pp-table tr.section-row td {
   background: #232A22;    /* 背景 */
-  color: #A3CF9F;         /* テキスト */
+  color: #91A38F;         /* テキスト */
   font-weight: 700;       /* Bold */
   padding: 6px 10px;
   text-align: left;
@@ -200,12 +200,12 @@ h1 a:hover {
 /* セクション行（SRv2〜など）のリンク色も統一 */
 .section-row a,
 .section-row a:visited {
-  color: #A3CF9F;
+  color: #91A38F;
   text-decoration: none;
 }
 
 .section-row a:hover {
-  color: #A3CF9F;
+  color: #91A38F;
   text-decoration: underline;
 }
 
