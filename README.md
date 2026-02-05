@@ -55,6 +55,59 @@ difficult to retrieve in the future.
 Community submissions are welcome — especially if you possess historical data
 that is currently missing from the archive.
 
+## ⭐ Star Rating (SR) calculation methodology
+
+### 🔎 Sources of SR confirmation
+
+SR values are confirmed from the following two categories:
+
+1. **Primary (real-world) sources**
+   - In-game screenshots (osu! client)
+   - YouTube thumbnails / descriptions
+   - GitHub repository titles or commit notes
+   - Other publicly verifiable materials
+
+2. **Recalculated SR values**
+   - Independently recalculated by the author using period-accurate tools and formulas  
+   - Used to supplement or validate records when primary sources are incomplete or ambiguous
+
+
+### 📅 SR calculation methods by era
+---
+
+#### 🔁 Standard → Taiko conversion
+
+For **standard-converted taiko maps**, SR is **underestimated** if calculated directly in standard mode.  
+Therefore, the following workflow is used:
+
+- Standard beatmaps are first converted into taiko beatmaps using `Std2Taiko`
+- SR is then calculated in **taiko ruleset**
+
+#### 1️⃣ Before 2020-09-16 (ppv2 era)
+
+- SR is calculated using `osu-trainer`, which implements the legacy ppv2 SR formula.
+
+#### 2️⃣ On and after 2020-09-16 (ppv3 era and later)
+
+- SR is calculated using the **official osu!lazer SR formulas**
+- The formulas are taken from period-accurate branches of the osu!lazer codebase
+- Calculations are performed via `osu-tools / PerformanceCalculator`
+
+Relevant repositories:
+
+- **Std2Taiko**  
+  https://github.com/calmeel/Std2Taiko
+
+- **osu-trainer**  
+  https://github.com/FunOrange/osu-trainer
+
+- **osu!lazer codebase (formula reference)**  
+  https://github.com/Piotrekol/osu
+
+- **SR calculation tool (CLI)**  
+  https://github.com/ppy/osu-tools
+
+
 ## 📂 Repository Structure
 ```
 osu-taiko-pp-record-history/
@@ -214,20 +267,29 @@ This project exists to:
 
 No part of this project is intended for commercial use, exploitation, defamation, or harm.
 
+## 📜 Disclaimer
+
+This is an unofficial historical project not affiliated with osu! or ppy.  
+All replays and assets belong to their respective owners and are preserved strictly for archival and documentation purposes.
 
 ## 📬 Contact
 
 Discord id: **vanity8**  
 (If you have replays, missing plays, or corrections, please message me!)
 
-## 📜 Disclaimer
-
-This is an unofficial historical project not affiliated with osu! or ppy.  
-All replays and assets belong to their respective owners and are preserved strictly for archival and documentation purposes.
-
 ## 🌟 Credits
 
 - osu! — https://osu.ppy.sh/
-- osu!taiko community for historical context and replay sharing
-- Everyone who helped preserve old records before they disappeared
-Replay files are provided when available for verification and archival purposes.
+
+## 🤝 Contributions
+
+The following individuals contributed to this project through verification, methodology, and data collection support:
+
+- **shinchikuhome**, **Majimanjiwwwww**  
+  – Verification of personal performance records
+
+- **Anders8KJS**  
+  – Suggestions on replay data collection methodologies
+
+- **Hoshino1 / puk06 / ぷこるふ**  
+  – Suggestions on Star Rating (SR) calculation methodologies
