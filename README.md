@@ -1,5 +1,6 @@
-# osu!taiko PP Record History
-![Description](docs/screenshot_1.png)
+# osu!taiko PP Record 
+![](docs/logo.png)
+![Description](docs/screenshot_2.png)
 
 This repository documents the historical progression of top osu!taiko performance point (PP) records.  
 All records are manually collected from web archives, osu! comments, social media posts, and community contributions.
@@ -14,7 +15,7 @@ The goal of this project is to preserve the historical context of osu!taiko PP a
 
 - Highest PP values
 - Player information
-- Map details (SR, BPM, mapper)
+- Map details (SR, Map Link)
 - Mods used
 - Replay availability
 - Dates and record eras
@@ -43,7 +44,6 @@ primary sources used to verify the accuracy of historical PP data.
 These include:
 
 - screenshots of plays
-- replay files (.osr)
 - player comments and self-reports
 - leaderboard snapshots
 - metadata notes (as `.md`)
@@ -64,7 +64,6 @@ SR values are confirmed from the following two categories:
 1. **Primary (real-world) sources**
    - In-game screenshots (osu! client)
    - YouTube thumbnails / descriptions
-   - GitHub repository titles or commit notes
    - Other publicly verifiable materials
 
 2. **Recalculated SR values**
@@ -85,12 +84,13 @@ Therefore, the following workflow is used:
 
 #### 1️⃣ Before 2020-09-16 (ppv2 era)
 
-- SR is calculated using `osu-trainer`, which implements the legacy ppv2 SR formula.
+- SR is calculated using `osu-trainer`, which imitates the legacy ppv2 SR formula.
+- Please note that this calculation formula may not be accurate.
 
 #### 2️⃣ On and after 2020-09-16 (ppv3 era and later)
 
 - SR is calculated using the **official osu!lazer SR formulas**
-- The formulas are taken from period-accurate branches of the osu!lazer codebase
+- The formulas are taken from period-accurate branches of the `osu!lazer codebase`
 - Calculations are performed via `osu-tools / PerformanceCalculator`
 
 Relevant repositories:
@@ -104,7 +104,7 @@ Relevant repositories:
 - **osu!lazer codebase (formula reference)**  
   https://github.com/Piotrekol/osu
 
-- **SR calculation tool (CLI)**  
+- **osu-tools / PerformanceCalculator (SR calculation tool)**  
   https://github.com/ppy/osu-tools
 
 
@@ -128,8 +128,6 @@ osu-taiko-pp-record-history/
      │     ├─ memo.md
      └─ ...
 ```
-
-Replay files are provided when available for verification and archival purposes.
 
 
 ## 🕒 Automation
@@ -159,12 +157,6 @@ If you would like to contribute, you can open an issue or contact me directly.
 This project is intended as a **community-based archive** and as a form of **long-term digital preservation** for notable osu!taiko PP records.  
 Many historical plays become difficult or impossible to reconstruct once forum posts, videos, comments, or leaderboard snapshots disappear over time.  
 This archive aims to maintain accessible context such as:
-- PP value
-- player information
-- map data
-- replay availability
-- era-specific scoring conditions
-- links to primary sources (YouTube, X/Twitter, Reddit, osu!, etc.)
 
 This project is **non-commercial** and maintained with no malicious intent.
 
@@ -255,17 +247,6 @@ Asset-specific exceptions:
 | Other assets | © Their respective owners |
 
 For full license details, see: LICENSE, NOTICE, and ATTRIBUTION.md
-
-## 🎯 Intent Summary
-
-This project exists to:
-- preserve community history,
-- maintain public access to otherwise ephemeral information,
-- avoid data loss,
-- assist verification and research,
-- support the osu!taiko community long-term.
-
-No part of this project is intended for commercial use, exploitation, defamation, or harm.
 
 ## 📜 Disclaimer
 
