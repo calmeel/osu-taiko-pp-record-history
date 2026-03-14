@@ -30,6 +30,12 @@ h1 {
   margin-bottom: 16px;
 }
 
+.last-update {
+  margin: 6px 0 14px 0;
+  font-size: 14px;
+  color: #bfc7d5;
+}
+
 /* 表全体：Excel 風 */
 .table-wrapper {
   overflow-x: auto;

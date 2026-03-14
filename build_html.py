@@ -37,7 +37,7 @@ COL_REMARKS = "Remarks"
 MOD_COLS = ["MOD1", "MOD2", "MOD3", "MOD4", "MOD5", "MOD6", "MOD7"]
 
 # ==== HTML テンプレ（ヘッダー部分） ====
-HTML_HEAD = """<!DOCTYPE html>
+HTML_HEAD = f"""<!DOCTYPE html>
 <html lang="ja">
 <meta name="description" content="Historical record of osu!taiko top performance points (pp) plays, manually collected by Vanity8.">
 <head>
@@ -50,6 +50,7 @@ HTML_HEAD = """<!DOCTYPE html>
 <body>
 
 <h1>osu!taiko pp record history (created by <a href="https://osu.ppy.sh/users/12029122" target="_blank" rel="noopener noreferrer">Vanity8</a>)</h1>
+<p class="last-update">Last update: {TODAY.strftime("%Y/%m/%d")}</p>
 <p class="subtitle">
   I manually collect records using web archives, osu! comments, and all kinds of social media.<br>
   If you notice any missing information or have replay data, please let me know on my Discord (id: vanity8) and I'll add it.
