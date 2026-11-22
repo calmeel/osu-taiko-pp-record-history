@@ -1,6 +1,6 @@
 # osu!taiko PP Record 
-![](docs/logo.png)
-![Description](docs/screenshot_2.png)
+![osu!taiko pp record history logo](assets/readme/logo.png)
+![PP record table preview](assets/readme/site-preview.png)
 
 This repository documents the historical progression of top osu!taiko performance point (PP) records.  
 All records are manually collected from web archives, osu! comments, social media posts, and community contributions.
@@ -117,10 +117,12 @@ osu-taiko-pp-record-history/
 ├─ build_html.py -> HTML generator
 ├─ data.xlsx -> Raw data source
 │
-├─ jackets/ -> Beatmap jacket art
-├─ ref_icons/ -> External link icons
-├─ icons_mod/ -> Mod icons
-├─ icons_flag/ -> Country flags
+├─ assets/
+│  ├─ jackets/ -> Beatmap jacket art
+│  ├─ ref_icons/ -> External link icons
+│  ├─ icons_mod/ -> Mod icons
+│  ├─ icons_flag/ -> Country flags
+│  └─ readme/ -> README logo and site preview
 ├─ replays/ -> .osr replay files
 └─ evidence/             → Primary sources for verification
      ├─ YYYY-MM-DD_ppUUU/

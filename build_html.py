@@ -255,7 +255,7 @@ def build_mod_cell(row):
     for col in MOD_COLS:
         if col in row and not pd.isna(row[col]) and str(row[col]):
             fname = str(row[col])
-            src = html.escape(f"icons_mod/{fname}", quote=True)
+            src = html.escape(f"assets/icons_mod/{fname}", quote=True)
             alt = html.escape(fname.rsplit(".", 1)[0])
             imgs.append(f'<img src="{src}" alt="{alt}" class="mod-icon">')
 
@@ -269,14 +269,14 @@ def build_mod_cell(row):
 def build_flag_cell(flag_filename):
     if pd.isna(flag_filename) or not str(flag_filename):
         return '      <td class="icon-col"></td>\n'
-    src = html.escape(f"icons_flag/{flag_filename}", quote=True)
+    src = html.escape(f"assets/icons_flag/{flag_filename}", quote=True)
     return f'      <td class="icon-col"><img src="{src}" alt="" class="flag-icon"></td>\n'
 
 
 def build_jacket_cell(jacket_filename):
     if pd.isna(jacket_filename) or not str(jacket_filename):
         return '      <td class="icon-col"></td>\n'
-    src = html.escape(f"jackets/{jacket_filename}", quote=True)
+    src = html.escape(f"assets/jackets/{jacket_filename}", quote=True)
     return f'      <td class="icon-col"><img src="{src}" alt="jacket" class="jacket"></td>\n'
 
 def fmt_sr(val):
@@ -493,16 +493,16 @@ def main():
 
         # osu / YouTube / reddit / X
         row_parts.append(
-            build_icon_link_cell(osu_icon, osu_url, "icon-col", "ref_icons")
+            build_icon_link_cell(osu_icon, osu_url, "icon-col", "assets/ref_icons")
         )
         row_parts.append(
-            build_icon_link_cell(yt_icon, yt_url, "icon-col", "ref_icons")
+            build_icon_link_cell(yt_icon, yt_url, "icon-col", "assets/ref_icons")
         )
         row_parts.append(
-            build_icon_link_cell(rd_icon, rd_url, "icon-col", "ref_icons")
+            build_icon_link_cell(rd_icon, rd_url, "icon-col", "assets/ref_icons")
         )
         row_parts.append(
-            build_icon_link_cell(x_icon, x_url, "icon-col", "ref_icons")
+            build_icon_link_cell(x_icon, x_url, "icon-col", "assets/ref_icons")
         )
 
         # Replay
