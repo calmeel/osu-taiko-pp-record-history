@@ -55,114 +55,8 @@ difficult to retrieve in the future.
 Community submissions are welcome — especially if you possess historical data
 that is currently missing from the archive.
 
-## ⭐ Star Rating (SR) calculation methodology
-
-### 🔎 Sources of SR confirmation
-
-SR values are confirmed from the following two categories:
-
-1. **Primary (real-world) sources**
-   - In-game screenshots (osu! client)
-   - YouTube thumbnails / descriptions
-   - Other publicly verifiable materials
-
-2. **Recalculated SR values**
-   - Independently recalculated by the author using period-accurate tools and formulas  
-   - Used to supplement or validate records when primary sources are incomplete or ambiguous
-
-
-### 📅 SR calculation methods by era
----
-
-#### 🔁 Standard → Taiko conversion
-
-For **standard-converted taiko maps**, SR is **underestimated** if calculated directly in standard mode.  
-Therefore, the following workflow is used:
-
-- Standard beatmaps are first converted into taiko beatmaps using `Std2Taiko`
-- SR is then calculated in **taiko ruleset**
-
-#### 1️⃣ Before 2020-09-16 (ppv2 era)
-
-- SR is calculated using `osu-trainer`, which imitates the legacy ppv2 SR formula.
-- Please note that this calculation formula may not be accurate.
-
-#### 2️⃣ On and after 2020-09-16 (ppv3 era and later)
-
-- SR is calculated using the **official osu!lazer SR formulas**
-- The formulas are taken from period-accurate branches of the `osu!lazer codebase`
-- Calculations are performed via `osu-tools / PerformanceCalculator`
-
-Relevant repositories:
-
-- **Std2Taiko**  
-  https://github.com/calmeel/Std2Taiko
-
-- **osu-trainer**  
-  https://github.com/FunOrange/osu-trainer
-
-- **osu!lazer codebase (formula reference)**  
-  https://github.com/Piotrekol/osu
-
-- **osu-tools / PerformanceCalculator (SR calculation tool)**  
-  https://github.com/ppy/osu-tools
-
-
-## 📂 Repository Structure
-```
-osu-taiko-pp-record-history/
-│
-├─ index.html -> Generated public site
-├─ style.css -> Styling
-├─ build_html.py -> HTML generator
-├─ data.xlsx -> Raw data source
-│
-├─ assets/
-│  ├─ favicon/ -> Yellow crown favicon
-│  ├─ jackets/ -> Beatmap jacket art
-│  ├─ ref_icons/ -> External link icons
-│  ├─ icons_mod/ -> Mod icons
-│  ├─ icons_flag/ -> Country flags
-│  └─ readme/ -> README logo and site preview
-├─ replays/ -> .osr replay files
-└─ evidence/             → Primary sources for verification
-     ├─ YYYY-MM-DD_ppUUU/
-     │     ├─ screenshot.png
-     │     ├─ memo.md
-     └─ ...
-```
-
-
-## 🕒 Automation
-
-A daily GitHub Actions workflow runs automatically to:
-
-- regenerate `index.html`
-- update day counters
-- push changes if any
-
-This ensures the site stays up-to-date without manual intervention.
-
-
-## 🤝 Contributing
-
-Community contributions are welcome—especially if you:
-
-- know of records that are missing
-- have replay files
-- have date corrections
-- found inaccurate or conflicting information
-
-If you would like to contribute, you can open an issue or contact me directly.
-
-## 📚 Archival Purpose
-
-This project is intended as a **community-based archive** and as a form of **long-term digital preservation** for notable osu!taiko PP records.  
-Many historical plays become difficult or impossible to reconstruct once forum posts, videos, comments, or leaderboard snapshots disappear over time.  
-This archive aims to maintain accessible context such as:
-
-This project is **non-commercial** and maintained with no malicious intent.
-
+For Star Rating (SR) sources and calculation methods, see
+[Star Rating (SR) calculation methodology](SR_CALCULATION.md).
 
 ## 🛡 Asset Ownership & Use Policy
 
@@ -199,32 +93,6 @@ The full license text is included in this repository at:
 
 Please refer to that file for the exact terms of use before reusing the font files outside of this project.
 
-## 📑 Legal & Trademark Notes
-
-- **No ownership is transferred or implied**
-- **No assets are monetized**
-- **No endorsement is implied**
-- **External assets remain under their original Terms of Service**
-- **Content is shown only as necessary for documentation and verification**
-
-This repository and its maintainer are not affiliated with osu!, ppy, or any platform referenced within this project.
-
-
-## 🧾 Removal & Correction Requests
-
-If you:
-- are the rights holder of a linked video or media,
-- are the creator of a beatmap jacket,
-- are the player of a replay file,
-- or are the copyright holder of any relevant asset,
-
-and would prefer your content not to be included, please contact me and I will take immediate action without dispute.
-
-For removal or correction requests, contact:
-
-> Discord: `vanity8`
-
-
 ## 📘 Licensing
 
 This repository contains multiple asset types with distinct ownership.  
@@ -251,6 +119,32 @@ Asset-specific exceptions:
 
 For full license details, see: LICENSE, NOTICE, and ATTRIBUTION.md
 
+## 📑 Legal & Trademark Notes
+
+- **No ownership is transferred or implied**
+- **No assets are monetized**
+- **No endorsement is implied**
+- **External assets remain under their original Terms of Service**
+- **Content is shown only as necessary for documentation and verification**
+
+This repository and its maintainer are not affiliated with osu!, ppy, or any platform referenced within this project.
+
+
+## 🧾 Removal & Correction Requests
+
+If you:
+- are the rights holder of a linked video or media,
+- are the creator of a beatmap jacket,
+- are the player of a replay file,
+- or are the copyright holder of any relevant asset,
+
+and would prefer your content not to be included, please contact me and I will take immediate action without dispute.
+
+For removal or correction requests, contact:
+
+> Discord: `vanity8`
+
+
 ## 📜 Disclaimer
 
 This is an unofficial historical project not affiliated with osu! or ppy.  
@@ -260,10 +154,6 @@ All replays and assets belong to their respective owners and are preserved stric
 
 Discord id: **vanity8**  
 (If you have replays, missing plays, or corrections, please message me!)
-
-## 🌟 Credits
-
-- osu! — https://osu.ppy.sh/
 
 ## 🤝 Contributions
 
