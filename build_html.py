@@ -45,6 +45,8 @@ HTML_HEAD = f"""<!DOCTYPE html>
   <!-- スマホでもPC版レイアウトで表示させる -->
   <meta name="viewport" content="width=1280">
   <title>osu!taiko pp record history</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

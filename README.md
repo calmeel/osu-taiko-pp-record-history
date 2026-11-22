@@ -118,6 +118,7 @@ osu-taiko-pp-record-history/
 ├─ data.xlsx -> Raw data source
 │
 ├─ assets/
+│  ├─ favicon/ -> Yellow crown favicon
 │  ├─ jackets/ -> Beatmap jacket art
 │  ├─ ref_icons/ -> External link icons
 │  ├─ icons_mod/ -> Mod icons
